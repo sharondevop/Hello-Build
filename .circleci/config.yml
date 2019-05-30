@@ -12,7 +12,7 @@ jobs: # a collection of steps
            echo 'This is the delivery pipeline'
            echo 'Sharon very nice you are learning to us circleci'
 
-    - run:
+     - run:
         name: Code Has Arrived
         command: |
           ls -al
