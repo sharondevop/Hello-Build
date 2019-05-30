@@ -4,9 +4,16 @@ jobs: # a collection of steps
    docker: # run the steps with Docker
      - image: alpine:3.7 # ...with this image as the primary container; this is where all `steps` will run
    steps: # a collection of executable commands
+     - checkout # special step to check out source code to working directory
      - run:
          name: The First Step
          command: |
            echo 'Hello World!'
            echo 'This is the delivery pipeline'
            echo 'Sharon very nice you are learning to us circleci'
+
+    - run:
+        name: Code Has Arrived
+        command: |
+          ls -al
+          echo '^^^That should look familiar^^^'
